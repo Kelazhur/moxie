@@ -23,6 +23,8 @@ int main(){
         {}
         if(code==5)
         {
+            printf("正在退出……\n");
+            break;
         }
     }
 }
