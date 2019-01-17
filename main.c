@@ -43,7 +43,23 @@ int main(){
             scanf("%c",&enter);
         }
         if(code==3)
-        {}
+        {
+            if(index>0)
+            {
+                for(int i=0;i<index;i++)
+                {
+                    printf("第%d个敏感字符是%c\n",i+1,arr[i]);
+                }
+            }
+            else
+            {
+                printf("查询失败，无敏感字符\n");
+            }
+            printf("点击回车继续\n");
+            char enter;
+            scanf("%c",&enter);
+            scanf("%c",&enter);
+        }
         if(code==4)
         {}
         if(code==5)
