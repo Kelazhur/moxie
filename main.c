@@ -14,7 +14,18 @@ int main(){
         int code;
         scanf("%d",&code);
         if(code==1)
-        {}
+        {
+            printf("请输入要添加的敏感字符：\n");
+            char mingan;
+            scanf("%c",&mingan);
+            scanf("%c",&mingan);
+            arr[index]=mingan;
+            index++;
+            printf("添加成功，点击回车继续\n");
+            char enter;
+            scanf("%c",&enter);
+            scanf("%c",&enter);
+        }
         if(code==2)
         {}
         if(code==3)
