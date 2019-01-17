@@ -1,6 +1,25 @@
 #include <stdio.h>
 char arr[1000];
 int index=0;
+int sensitive(char x)
+{
+    int count=0;
+    for(int i=0;i<index;i++)
+    {
+        if(x==arr[i])
+        {
+            count++;
+        }
+    }
+    if(count==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
 int main(){
     printf("进入敏感字符管理系统\n");
     while(1)
@@ -61,7 +80,27 @@ int main(){
             scanf("%c",&enter);
         }
         if(code==4)
-        {}
+        {
+            printf("请输入一段内容：\n");
+            char text[1000];
+            scanf("%s",text);
+            for(int i=0;1;i++)
+            {
+                if(text[i]=='\0')
+                {
+                    break;
+                }
+                if(sensitive(text[i])!=0)
+                {
+                    text[i]='*';
+                }
+                printf("%c",text[i]);
+            }
+            printf("\n替换完成，点击回车继续\n");
+            char enter;
+            scanf("%c",&enter);
+            scanf("%c",&enter);
+        }
         if(code==5)
         {
             printf("正在退出……\n");
